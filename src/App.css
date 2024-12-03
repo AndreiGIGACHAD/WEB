@@ -1,9 +1,11 @@
+/* Убирает отступы и заполняет фон  */
+
 html, body {
   margin: 0;
   padding: 0;
   background-color: #424242;
 }
-
+/* Основной контейнер приложения */
 .App {
     font-family: Arial, sans-serif;
     max-width: 600px;
@@ -15,7 +17,7 @@ html, body {
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-
+/* Стили для текстового ввода */
 input[type="text"] {
   padding: 8px;
   font-size: 16px;
@@ -24,7 +26,7 @@ input[type="text"] {
   background-color: #2f2f2f;
   color: white;
 }
-
+/* Стили для кнопок */
 button {
   padding: 8px 12px;
   margin-top: 10px;
@@ -35,13 +37,13 @@ button {
   background-color: #2f2f2f;
   color: white;
 }
-
+/* Убирает стандартный стиль списка */
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
+/* Стили для элементов списка задач */
 li {
   display: flex;
   align-items: center;
@@ -50,30 +52,30 @@ li {
   border-bottom: 1px solid white;
   position: relative;
 }
-
+/* Убирает нижнюю границу у последнего элемента списка */
 li:last-child {
   border-bottom: none;
 }
-
+/* Контейнер для текста задачи */
 .task-content {
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
-
+/* Стили для текста задачи */
 .task-content span {
   margin-left: 10px;
   text-decoration: none;
   word-break: break-all;
 }
-
+/* Контейнер для кнопок задач */
 .task-actions {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-left: 20px;
 }
-
+/* Устанавливает фиксированную ширину для кнопок управления задачей */
 .task-actions button {
   width: 150px;
 }

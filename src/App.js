@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
+ // Хранение списка задач
   const [tasks, setTasks] = useState([]);
+    // Хранение текста новой задачи
+
   const [taskText, setTaskText] = useState('');
+
+
+  // Функция добавления новой задачи
 
   const addTask = () => {
     if (taskText.trim()) {
@@ -11,10 +17,12 @@ const App = () => {
       setTaskText('');
     }
   };
+  // Функция удаления задачи
 
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
+  // Функция переключения статуса выполнения задачи
 
   const toggleTask = (id) => {
     setTasks(
@@ -23,6 +31,7 @@ const App = () => {
       )
     );
   };
+  // Функция редактирования задачи
 
   const editTask = (id) => {
     const newText = prompt('Измените название задачи:');
